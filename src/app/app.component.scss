@@ -1,0 +1,420 @@
+@import "../../utilities/breakpoints.scss";
+
+header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c2431;
+  @include bp-tablet {
+    padding: 35px;
+  }
+  @include bp-desktop {
+    padding: 70px;
+  }
+  .logo {
+    img {
+      max-width: 110px;
+      max-height: 44px;
+      @include bp-tablet {
+        max-width: 170px;
+        max-height: 54px;
+      }
+    }
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      @include bp-tablet {
+        font-size: 16px;
+      }
+    }
+  }
+}
+.cta {
+  background-color: #1c2431;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/images/bg-curvy-desktop.svg");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  @include bp-desktop {
+    background-size: contain;
+  }
+  img {
+    width: 100%;
+    max-width: 720px;
+  }
+  h3 {
+    @include bp-tablet {
+      font-size: 36px;
+      line-height: 60px;
+      max-width: 720px;
+    }
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 80%;
+    text-align: center;
+    margin-top: 28px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    max-width: 80%;
+    margin-top: 28px;
+    @include bp-tablet {
+      max-width: 590px;
+      font-size: 18px;
+    }
+  }
+  button {
+    margin-top: 28px;
+    border-radius: 28px;
+    background: #8adae3;
+    box-shadow: 2px 3px 6px rgb(0 0 0 / 16%);
+    color: white;
+    max-width: 240px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    height: 48px;
+    border: 0px;
+    @include bp-tablet {
+      font-size: 18px;
+      max-width: 280px;
+    }
+  }
+}
+.items {
+  margin: 75px auto;
+  display: flex;
+  background-color: #181f2a;
+  color: white;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  @include bp-tablet {
+    max-width: 880px;
+  }
+  @include bp-desktop {
+    max-width: 1300px;
+  }
+  .article {
+    max-width: 320px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    justify-content: space-between;
+    margin: 40px auto;
+    img {
+      width: 64px;
+      height: 64px;
+    }
+    h5 {
+      font-weight: 700;
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+.productive {
+  display: flex;
+  align-items: center;
+  margin: 110px auto;
+  max-width: 320px;
+  flex-direction: column;
+  @include bp-tablet {
+    max-width: 720px;
+    flex-direction: row;
+  }
+  @include bp-desktop {
+    max-width: 1300px;
+  }
+  img {
+    width: 100%;
+    @include bp-tablet {
+      max-width: 450px;
+      padding-right: 20px;
+    }
+    @include bp-desktop {
+      max-width: 600px;
+      padding-right: 20px;
+    }
+  }
+  .infos {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    h3 {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 24px;
+      padding: 20px 0px;
+      @include bp-tablet {
+        font-size: 30px;
+        line-height: 36px;
+      }
+      @include bp-desktop {
+        max-width: 500px;
+        font-size: 36px;
+        line-height: 50px;
+      }
+    }
+    p {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      padding-top: 15px;
+      @include bp-desktop {
+        font-size: 16px;
+        max-width: 80%;
+      }
+    }
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: #62e0d9;
+      font-weight: 600;
+      padding-top: 15px;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #62e0d9;
+    }
+  }
+}
+.reviews {
+  display: flex;
+  margin: 50px auto;
+  max-width: 320px;
+  justify-content: space-evenly;
+  color: white;
+  flex-direction: column;
+  @include bp-tablet {
+    max-width: 720px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include bp-desktop {
+    max-width: 1300px;
+  }
+  .box {
+    height: 160px;
+    padding: 20px;
+    background: #202a3c;
+    box-shadow: 5px 5px 8px 4px rgba(56, 56, 56, 0.0991282);
+    border-radius: 3.93258px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 450;
+    margin: 20px 0px;
+    @include bp-tablet {
+      width: 32%;
+      padding: 10px;
+    }
+    @include bp-desktop {
+      width: 31%;
+      padding: 20px;
+    }
+    .icon {
+      position: absolute;
+      left: -10px;
+      top: -10px;
+      width: 26px;
+      z-index: 1;
+    }
+    p {
+      font-size: 10px;
+      line-height: 18px;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+      margin: 10px auto;
+      @include bp-desktop {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+    .end {
+      display: flex;
+      align-items: center;
+      img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        border-radius: 60%;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        span {
+          font-size: 10px;
+          font-weight: bold;
+          letter-spacing: 0.5px;
+          @include bp-desktop {
+            font-size: 14px;
+            line-height: 21px;
+          }
+        }
+        small {
+          font-size: 8px;
+          line-height: 10px;
+          letter-spacing: 0.571429px;
+          @include bp-desktop {
+            font-size: 10px;
+            line-height: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+.signup {
+  max-width: 330px;
+  margin: 0 auto;
+  background: #1b2330;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 2px 3px 6px 0px #00000029;
+  transform: translateY(50%);
+  border-radius: 10px;
+  z-index: 444;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include bp-tablet {
+    max-width: 720px;
+  }
+  @include bp-desktop {
+    max-width: 1300px;
+    padding: 50px;
+  }
+  h1 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    @include bp-tablet {
+      font-size: 32px;
+      line-height: 44px;
+    }
+  }
+  p {
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 1rem 0rem;
+    line-height: 21px;
+    @include bp-desktop {
+      font-size: 16px;
+      max-width: 75%;
+    }
+  }
+  .wrapInput {
+    max-width: 280px;
+    @include bp-tablet {
+      max-width: 700px;
+      display: flex;
+    }
+    @include bp-desktop {
+      max-width: 75%;
+      display: flex;
+    }
+    input {
+      width: 100%;
+      border-radius: 9999px;
+      padding: 16px 0 16px 38px;
+      border: none;
+      @include bp-tablet {
+        min-width: 450px;
+        margin-right: 15px;
+      }
+      @include bp-desktop {
+        min-width: 600px;
+        margin-right: 15px;
+      }
+    }
+    button {
+      width: 100%;
+      border: 0px;
+      font-family: "Raleway", sans-serif;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+      background: linear-gradient(138.1deg, #63e1d9 -49.34%, #34a0cd 100%);
+      border-radius: 9999px;
+      padding: 15px 26.5px;
+      margin-top: 1rem;
+      @include bp-tablet {
+        margin-top: 0rem;
+      }
+    }
+  }
+}
+.footer {
+  z-index: 1;
+  font-size: 14px;
+  padding-top: 160px;
+  background: #0b1524;
+  min-height: 380px;
+  color: white;
+  position: relative;
+
+  .footerInfos {
+    display: flex;
+    padding-top: 2rem;
+    margin: 0 auto;
+    max-width: 320px;
+    flex-direction: column;
+    @include bp-tablet {
+      padding-top: 0.5rem;
+      flex-direction: row;
+      max-width: 90%;
+      justify-content: space-between;
+    }
+    @include bp-desktop {
+      max-width: 100%;
+      padding: 70px;
+    }
+    img {
+      max-width: 110px;
+      height: 32px;
+      @include bp-desktop {
+        max-width: 170px;
+        height: 54px;
+      }
+    }
+    .infos {
+      display: flex;
+      flex-direction: column;
+      .row {
+        padding-top: 20px;
+        display: flex;
+        font-size: 14px;
+        align-items: center;
+        @include bp-desktop {
+          font-size: 16px;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

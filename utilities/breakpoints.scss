@@ -1,0 +1,35 @@
+$grid-breakpoints: (
+  phone: 375px,
+  tablet: 768px,
+  desktop: 1366px,
+  lg-desktop: 1920px,
+);
+
+@mixin bp-lg-desktop {
+  @media screen and (min-width: map-get($grid-breakpoints, lg-desktop)) {
+    @content;
+  }
+}
+
+@mixin bp-desktop {
+  @media screen and (min-width: map-get($grid-breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin bp-tablet {
+  @media screen and (min-width: map-get($grid-breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin bp-phone {
+  @media screen and (min-width: map-get($grid-breakpoints, phone)) {
+    @content;
+  }
+}
+// to set breakpoints :
+// element {
+//   @include bp-small {
+//   }
+// }
